@@ -83,10 +83,13 @@ for distro in ${distrolist}; do
 	echo "Permissions fixed."
 
 	echo "Generating Packages.gz for ${distrocachedir}/"
-	dpkg-scanpackages ${distrocachedir} /dev/null 2>/dev/null | gzip -9 > ${distrocachedir}/Packages.gz
+	cd ${distrocachedir}/
+	dpkg-scanpackages . /dev/null 2>/dev/null | gzip -9 > Packages.gz
 	echo "Done."
 
 done
+
+cd ${workingdir}
 
 echo "Making folder for gems."
 mkdir -p ${gemfolder}
