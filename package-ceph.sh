@@ -42,7 +42,7 @@ touch $sourcefile
 
 echo "Writing to tmp sources.list..."
 tee $sourcefile <<-'EOL'
-deb http://ceph.com/debian precise main
+deb http://gitbuilder.ceph.com/ceph-deb-precise-x86_64-basic/ref/master precise main
 deb http://us-west-1.ec2.archive.ubuntu.com/ubuntu/ precise main restricted universe multiverse
 deb http://us-west-1.ec2.archive.ubuntu.com/ubuntu/ precise-updates main restricted universe multiverse
 deb http://us-west-1.ec2.archive.ubuntu.com/ubuntu/ precise-security main restricted universe multiverse
