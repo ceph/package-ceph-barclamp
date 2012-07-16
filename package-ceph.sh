@@ -23,7 +23,7 @@ startdir=`pwd`
 tmpfolder="/tmp/package-barclamp"
 cachefolder="${tmpfolder}/cache"
 mirrorfolder="${tmpfolder}/mirrors"
-gemfolder="cache/gems"
+gemfolder="${workingdir}/cache/gems"
 
 statusfile="${tmpfolder}/status"
 sourcefile="${tmpfolder}/sources.list"
@@ -59,7 +59,7 @@ echo "Done."
 
 for distro in ${distrolist}; do
 
-	distrocachedir="cache/${distro}/pkgs"
+	distrocachedir="${workingdir}/cache/${distro}/pkgs"
 	mkdir -p ${distrocachedir}
 
 	for package in ${packagelist}; do
