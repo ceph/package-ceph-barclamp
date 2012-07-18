@@ -32,6 +32,12 @@ distrolist="ubuntu-12.04"
 packagelist="ceph ceph-dbg ceph-common ceph-common-dbg libcephfs1 gdisk"
 gemlist="open4"
 
+echo "Destroying package cache folder"
+if [ -d "$workingdir/cache" ]; then
+	rm -rf ${workingdir}/cache
+fi
+echo "Done."
+
 echo "Creating tmp folders..."
 mkdir -p $tmpfolder
 mkdir -p $cachefolder
