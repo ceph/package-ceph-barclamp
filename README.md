@@ -25,7 +25,7 @@ This tarball should be uploaded to your admin node, once there extract and insta
 
 ```bash
 $ tar zxvf ceph.tar.gz
-$ sudo /opt/dell/bin/barclamp_installer.rb /path/to/bar --force
+$ sudo /opt/dell/bin/barclamp_install.rb /path/to/bar --force
 ```
 
 Using --force will overwrite any files from a previous install of the same barclamp.
